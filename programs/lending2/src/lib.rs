@@ -1,5 +1,9 @@
 use anchor_lang::prelude::*;
+mod instructions;
+use instructions::*;
 mod state;
+mod errors;
+
 declare_id!("3j8A4bTU1QPv6JndLLFqbvyohL9Jpc9CutJyKofNdDWj");
 
 #[program]
@@ -14,6 +18,8 @@ pub mod lending2 {
         process_init_user(ctx, usdc_address)
     }
 
-    
+    pub fn deposit(ctx: Context<Deposit>, amount: u64) -> Result<()>{
+        process_deposit(ctx, amount)
+    }
 }
 
