@@ -21,5 +21,8 @@ pub mod lending2 {
     pub fn deposit(ctx: Context<Deposit>, amount: u64) -> Result<()>{
         process_deposit(ctx, amount)
     }
+    pub fn withdraw(ctx: Context<Withdraw>, amount: u64) -> Result<()>{
+        process_withdraw(ctx, amount)
+    }
 }
 

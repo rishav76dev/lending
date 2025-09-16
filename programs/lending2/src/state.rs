@@ -22,7 +22,7 @@ pub struct User {
 pub struct Bank {
     pub authority: Pubkey,
     pub mint_address: Pubkey,
-    pub total_deposited: u64,
+    pub total_deposits: u64,
     pub total_deposited_shares: u64,
     pub liquidation_threshold: u64,
     pub liquidation_bonus: u64,
@@ -30,3 +30,4 @@ pub struct Bank {
     pub max_ltv: u64,
     pub last_update: i64,
 }
+
