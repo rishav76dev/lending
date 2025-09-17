@@ -94,5 +94,6 @@ pub fn process_deposit(ctx: Context<Deposit>, amount: u64) -> Result<()> {
     // 1) they eithe mint a collateral token to represent collateral that user has in the bank
     // 2) they create a share for us to represent portion of bank user know
     // for this project we are creating share instead ,because we will have to burn and mint token throught out the protocol
+    user.last_update = Clock::get()?.unix_timestamp;
     Ok(())
 }
