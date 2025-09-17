@@ -5,5 +5,7 @@ pub enum ErrorCode {
   #[msg("Insufficient Balance")]
   InsufficientBalance,
   #[msg("Requested amount exceeds borrowable amount")]
-  OverBorrowableAmount
+  OverBorrowableAmount,
+  #[msg("Requested amount exceeds repayable amount")]
+  OverRepay
 }
