@@ -27,7 +27,7 @@ pub struct InitBank<'info>{
         bump,
     )]
     pub bank_token_account: InterfaceAccount<'info, TokenAccount>,
-    
+
     pub token_program: Interface<'info, TokenInterface>,
     pub system_program: Program<'info, System>,
 }
@@ -54,6 +54,7 @@ pub fn process_init_bank(ctx: Context<InitBank>, liquidation_threshold: u64, max
     bank.authority= ctx.accounts.signer.key();
     bank.liquidation_threshold = liquidation_threshold;
     bank.max_ltv = max_ltv;
+    bank.interest_rate = 0.05 as u64;
     Ok(())
 }
 
