@@ -7,5 +7,5 @@ pub enum ErrorCode {
   #[msg("Requested amount exceeds borrowable amount")]
   OverBorrowableAmount,
   #[msg("Requested amount exceeds repayable amount")]
-  OverRepay
+  OverRepay,
 }
